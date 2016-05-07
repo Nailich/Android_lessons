@@ -12,18 +12,23 @@ import android.widget.TextView;
 public class MainActivity extends AppCompatActivity {
     TextView txt1;
     Button btn1;
+    Button buttonBack;
+
+    @Override
+    public void onBackPressed() {
+        super.onBackPressed();
+        setContentView(R.layout.activity_main);
+    }
+
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
 
-        final MediaPlayer button_on = MediaPlayer.create(this,R.raw.button_on);
-        final MediaPlayer button_off = MediaPlayer.create(this,R.raw.button_off);
+        final MediaPlayer button_off = MediaPlayer.create(this,R.raw.fio);
 
         btn1 = (Button)findViewById(R.id.btn1);
-
-        String name = this.getString(R.string.name);
-        Log.d("...", name);
+        buttonBack = (Button)findViewById(R.id.buttonBack);
 
         btn1.setOnTouchListener(new View.OnTouchListener() {
             ;
@@ -31,8 +36,8 @@ public class MainActivity extends AppCompatActivity {
             public boolean onTouch(View view, MotionEvent motionEvent) {
                 switch (motionEvent.getAction()) {
                     case MotionEvent.ACTION_DOWN:
-                        button_on.start();
                         Log.d("..........", "DOWN");
+                        setContentView(R.layout.activity_main_fio);
                         break;
                     case MotionEvent.ACTION_UP:
                         button_off.start();
@@ -42,6 +47,23 @@ public class MainActivity extends AppCompatActivity {
                 return false;
             }
         }
-            );
+        );
+
+        buttonBack.setOnTouchListener(new View.OnTouchListener() {
+            ;
+            @Override
+            public boolean onTouch(View view, MotionEvent motionEvent) {
+                switch (motionEvent.getAction()) {
+                    case MotionEvent.ACTION_UP:
+                        button_off.start();
+                        Log.d("..........", "DOWN");
+                        MainActivity.this.setContentView(R.layout.activity_main);
+                        break;
+                        }
+                return false;
+            }
+        }
+        );
+
     }
 }
