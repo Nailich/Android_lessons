@@ -1,0 +1,8 @@
+<resources>
+    <string name="app_name">Nail Tairov info</string>
+    <string name="menu">Menu:</string>
+    <string name="buttonPush">Push me</string>
+    <string name="name">Nail</string>
+    <string name="aboutMe">Nail Tairov</string>
+
+</resources>
