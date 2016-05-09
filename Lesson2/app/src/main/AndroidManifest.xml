@@ -18,6 +18,7 @@
         <activity android:label="Activity_main_fio" android:name=".FioActivity"></activity>
         <activity android:label="Activity_main_contacts" android:name=".ContactsActivity"></activity>
         <activity android:label="skills" android:name=".SkillsActivity"></activity>
+        <activity android:label="video" android:name=".VideoActivity"></activity>
     </application>
 
 </manifest>
