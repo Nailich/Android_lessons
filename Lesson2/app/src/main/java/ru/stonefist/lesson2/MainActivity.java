@@ -37,7 +37,8 @@ public class MainActivity extends AppCompatActivity {
                 switch (motionEvent.getAction()) {
                     case MotionEvent.ACTION_DOWN:
                         Log.d("..........", "DOWN");
-                        setContentView(R.layout.activity_main_fio);
+                        setContentView(R.layout.activity_main_2);
+                        new ArrayActivity();
                         break;
                     case MotionEvent.ACTION_UP:
                         button_off.start();
