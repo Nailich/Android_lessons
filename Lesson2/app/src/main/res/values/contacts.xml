@@ -1,0 +1,7 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string-array name="contacts">
+        <item>mobile: +7(916)333-22-11</item>
+        <item>e-mail: ntairov@mail.ru</item>
+    </string-array>
+</resources>

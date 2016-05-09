@@ -1,5 +1,6 @@
 package ru.stonefist.lesson2;
 
+import android.content.Intent;
 import android.content.res.Resources;
 import android.content.res.TypedArray;
 import android.os.Bundle;
@@ -45,5 +46,12 @@ public class ArrayActivity extends AppCompatActivity {
         int rnd = new Random().nextInt(planets.length);
         this.planetTxt.setText(planets[rnd]);
         this.planetImage.setImageDrawable(planetsImg.getDrawable(rnd));
+    }
+
+    public void onClickFio(View view) {
+        Intent intent=new Intent(this, ArrayActivity.class);
+        //intent.setClass(this, ArrayActivity.class);
+        startActivity(intent);
+        finish();
     }
 }

@@ -1,0 +1,8 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string-array name="skills">
+        <item>Kopat</item>
+        <item>Ne kopat</item>
+        <item>Otdihat</item>
+    </string-array>
+</resources>
