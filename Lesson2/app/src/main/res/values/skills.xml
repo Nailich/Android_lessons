@@ -1,8 +1,12 @@
 <?xml version="1.0" encoding="utf-8"?>
 <resources>
     <string-array name="skills">
-        <item>Kopat</item>
-        <item>Ne kopat</item>
-        <item>Otdihat</item>
+        <item>1) SQL</item>
+        <item>2) QA</item>
+        <item>3) PM</item>
+        <item>4) Analysis</item>
+        <item>5) Data mining</item>
+        <item>6) Analysis</item>
+        <item>7) Pull-ups: 20</item>
     </string-array>
 </resources>

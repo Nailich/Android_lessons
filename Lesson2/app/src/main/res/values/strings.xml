@@ -5,7 +5,8 @@
     <string name="contacts">Контакты</string>
     <string name="skills">Навыки</string>
     <string name="back">Назад</string>
-    <string name="name">Nail</string>
-    <string name="Family">Tairov</string>
+    <string name="name">Наиль</string>
+    <string name="Family">Таиров</string>
     <string name="mail">ntairov@mail.ru</string>
+    <string name="bDate">05.06.1985</string>
 </resources>
