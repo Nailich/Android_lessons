@@ -1,0 +1,112 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:paddingBottom="@dimen/activity_vertical_margin"
+    android:paddingLeft="@dimen/activity_horizontal_margin"
+    android:paddingRight="@dimen/activity_horizontal_margin"
+    android:paddingTop="@dimen/activity_vertical_margin"
+    tools:context="ru.stonefist.lesson2.MainActivity"
+    android:background="@drawable/back"
+    android:focusable="false">
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="@string/fio"
+        android:id="@+id/txtMenu"
+        android:textSize="40dp"
+        android:textColor="#c9f4e6"
+        android:layout_alignParentTop="true"
+        android:layout_centerHorizontal="true" />
+
+    <Button
+        android:layout_width="120dp"
+        android:layout_height="wrap_content"
+        android:text="@string/back"
+        android:id="@+id/buttonBack1"
+        android:onClick="onClickBack"
+        android:layout_alignParentBottom="true"
+        android:layout_alignParentLeft="true"
+        android:layout_alignParentStart="true" />
+
+    <ImageView
+        android:layout_width="220dp"
+        android:layout_height="200dp"
+        android:id="@+id/imageView"
+        android:background="#d4ee6d"
+        android:layout_gravity="center_horizontal"
+        android:padding="5dp"
+        android:adjustViewBounds="true"
+        android:src="@drawable/foto2"
+        android:layout_below="@+id/txtMenu"
+        android:layout_alignParentLeft="true"
+        android:layout_alignParentStart="true" />
+
+    <LinearLayout
+        android:orientation="vertical"
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:id="@+id/linearLayout"
+        android:layout_alignTop="@+id/imageView"
+        android:layout_toRightOf="@+id/imageView"
+        android:layout_toEndOf="@+id/imageView"
+        android:layout_marginTop="8dp">
+
+        <TextView
+            android:layout_width="300dp"
+            android:layout_height="40dp"
+            android:textAppearance="?android:attr/textAppearanceSmall"
+            android:text="@string/Family"
+            android:id="@+id/textFamily"
+            android:textColor="@color/txtColor"
+            android:textSize="20dp"
+            android:textIsSelectable="true"
+            android:layout_gravity="center_horizontal"
+            android:paddingLeft="0dp"
+            android:layout_above="@+id/imageView"
+            android:layout_alignRight="@+id/txtMenu"
+            android:layout_alignEnd="@+id/txtMenu"
+            android:padding="2dp"
+            android:background="@drawable/frame"
+            android:gravity="center"
+            android:layout_marginLeft="4dp" />
+
+        <TextView
+            android:layout_width="300dp"
+            android:layout_height="40dp"
+            android:textAppearance="?android:attr/textAppearanceSmall"
+            android:text="@string/name"
+            android:id="@+id/textName"
+            android:textColor="@color/txtColor"
+            android:textSize="20dp"
+            android:layout_alignTop="@+id/linearLayout"
+            android:layout_toRightOf="@+id/linearLayout"
+            android:layout_toEndOf="@+id/linearLayout"
+            android:layout_gravity="center_horizontal"
+            android:padding="2dp"
+            android:background="@drawable/frame"
+            android:gravity="center"
+            android:layout_marginTop="8dp"
+            android:layout_marginLeft="4dp" />
+
+        <TextView
+            android:layout_width="300dp"
+            android:layout_height="40dp"
+            android:textAppearance="?android:attr/textAppearanceMedium"
+            android:text="@string/bDate"
+            android:id="@+id/bDate"
+            android:textColor="@color/txtColor"
+            android:layout_below="@+id/txtMenu"
+            android:layout_centerHorizontal="true"
+            android:layout_gravity="center_horizontal"
+            android:padding="2dp"
+            android:background="@drawable/frame"
+            android:gravity="center"
+            android:layout_marginTop="8dp"
+            android:layout_marginLeft="4dp" />
+
+    </LinearLayout>
+
+</RelativeLayout>
