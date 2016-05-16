@@ -31,28 +31,17 @@
         android:layout_alignParentLeft="true"
         android:layout_alignParentStart="true" />
 
-    <ImageView
-        android:layout_width="220dp"
-        android:layout_height="200dp"
-        android:id="@+id/imageView"
-        android:background="#d4ee6d"
-        android:layout_gravity="center_horizontal"
-        android:padding="5dp"
-        android:adjustViewBounds="true"
-        android:src="@drawable/foto2"
-        android:layout_below="@+id/txtMenu"
-        android:layout_alignParentLeft="true"
-        android:layout_alignParentStart="true" />
 
     <LinearLayout
         android:orientation="vertical"
         android:layout_width="fill_parent"
         android:layout_height="wrap_content"
         android:id="@+id/linearLayout"
-        android:layout_alignTop="@+id/imageView"
-        android:layout_toRightOf="@+id/imageView"
-        android:layout_toEndOf="@+id/imageView"
-        android:layout_marginTop="8dp">
+        android:layout_alignTop="@+id/viewFlipper"
+        android:layout_alignParentRight="true"
+        android:layout_alignParentEnd="true"
+        android:layout_alignLeft="@+id/txtMenu"
+        android:layout_alignStart="@+id/txtMenu">
 
         <TextView
             android:layout_width="300dp"
@@ -108,5 +97,51 @@
             android:layout_marginLeft="4dp" />
 
     </LinearLayout>
+
+    <ViewFlipper
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:id="@+id/viewFlipper"
+        android:autoStart="true"
+        android:flipInterval="2000"
+        android:inAnimation="@anim/flipin"
+        android:outAnimation="@anim/flipout"
+        android:padding="8dp"
+        android:layout_below="@+id/txtMenu"
+        android:layout_toStartOf="@+id/txtMenu"
+        android:layout_above="@+id/buttonBack1">
+
+        <ImageView
+            android:layout_width="220dp"
+            android:layout_height="200dp"
+            android:id="@+id/imageView4"
+            android:background="#84f428"
+            android:adjustViewBounds="true"
+            android:layout_gravity="center_horizontal"
+            android:src="@drawable/foto2"
+            android:layout_alignTop="@+id/viewFlipper"
+            android:layout_centerHorizontal="true" />
+
+        <ImageView
+            android:layout_width="220dp"
+            android:layout_height="200dp"
+            android:id="@+id/imageView5"
+            android:background="#84f428"
+            android:adjustViewBounds="true"
+            android:layout_gravity="center_horizontal"
+            android:src="@drawable/foto3"
+            android:layout_alignTop="@+id/viewFlipper"
+            android:layout_centerHorizontal="true" />
+
+        <ImageView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:id="@+id/imageView"
+            android:background="#84f428"
+            android:adjustViewBounds="true"
+            android:src="@drawable/foto1"
+            android:layout_alignTop="@+id/viewFlipper"
+            android:layout_centerHorizontal="true" />
+    </ViewFlipper>
 
 </RelativeLayout>
