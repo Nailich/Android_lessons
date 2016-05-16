@@ -77,8 +77,7 @@ public class MainActivity extends AppCompatActivity {
         finish();
     }
 
-    public void onClickVideo(View view) {
-
+    public void testLayout(View view) {
         Intent intent=new Intent(this, VideoActivity.class);
         startActivity(intent);
         finish();

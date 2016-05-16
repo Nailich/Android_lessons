@@ -15,13 +15,5 @@ public class VideoActivity extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.video);
 
-        String videosource = "/WhatsApp/Media/WhatsApp Video/vid1.mp4";
-
-        VideoView videoView = (VideoView)findViewById(R.id.videoView);
-
-        videoView.setVideoPath(String.valueOf(R.raw.vid1));
-        videoView.setMediaController(new MediaController(this));
-        videoView.requestFocus(0);
-        videoView.start();
     }
 }

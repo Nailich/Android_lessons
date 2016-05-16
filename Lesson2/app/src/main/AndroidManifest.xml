@@ -11,14 +11,13 @@
         <activity android:name=".MainActivity">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
-
                 <category android:name="android.intent.category.LAUNCHER" />
             </intent-filter>
         </activity>
-        <activity android:label="Activity_main_fio" android:name=".FioActivity"></activity>
-        <activity android:label="Activity_main_contacts" android:name=".ContactsActivity"></activity>
-        <activity android:label="skills" android:name=".SkillsActivity"></activity>
-        <activity android:label="video" android:name=".VideoActivity"></activity>
+        <activity android:label="Activity_main_fio" android:name=".FioActivity"/>
+        <activity android:label="Activity_main_contacts" android:name=".ContactsActivity"/>
+        <activity android:label="skills" android:name=".SkillsActivity"/>
+        <activity android:label="video" android:name=".VideoActivity"/>
     </application>
 
 </manifest>
