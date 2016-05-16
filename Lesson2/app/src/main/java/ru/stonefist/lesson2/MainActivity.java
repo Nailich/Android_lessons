@@ -15,6 +15,7 @@ public class MainActivity extends AppCompatActivity {
     Button btn1;
     Button buttonBack;
 
+
     @Override
     public void onBackPressed() {
         super.onBackPressed();
@@ -54,6 +55,7 @@ public class MainActivity extends AppCompatActivity {
     public void onClickFio(View view) {
         final MediaPlayer button_fio = MediaPlayer.create(this,R.raw.fio);
         button_fio.start();
+        btn1.animate().scaleX(0.75f).scaleY(0.75f).setDuration(500);
         Intent intent=new Intent(this, FioActivity.class);
         startActivity(intent);
         finish();
