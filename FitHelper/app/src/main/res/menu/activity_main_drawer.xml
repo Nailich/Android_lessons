@@ -1,0 +1,44 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu xmlns:android="http://schemas.android.com/apk/res/android">
+
+    <group android:checkableBehavior="single">
+        <item
+            android:id="@+id/pParameters"
+            android:icon="@drawable/ic_menu_camera"
+            android:title="Физические параметры" />
+        <item
+            android:id="@+id/traningShedule"
+            android:icon="@drawable/ic_menu_gallery"
+            android:title="Распиание занятий" />
+        <item
+            android:id="@+id/exerciseComplex"
+            android:icon="@drawable/ic_menu_slideshow"
+            android:title="Комплекс упражнений" />
+        <item
+            android:id="@+id/nearestClubs"
+            android:icon="@drawable/ic_menu_manage"
+            android:title="Ближайшие клубы" />
+    </group>
+
+    <item android:title="Общение">
+        <menu>
+            <item
+                android:id="@+id/peopleCommunication"
+                android:icon="@drawable/ic_menu_share"
+                android:title="Открыть чат" />
+        </menu>
+    </item>
+    <item android:title="Отчеты">
+        <menu>
+            <item
+                android:id="@+id/parameterStatistic"
+                android:icon="@drawable/ic_menu_share"
+                android:title="Изменение физ параметров" />
+            <item
+                android:id="@+id/exerciseStatistic"
+                android:icon="@drawable/ic_menu_send"
+                android:title="Статистика упражнений" />
+        </menu>
+    </item>
+
+</menu>
