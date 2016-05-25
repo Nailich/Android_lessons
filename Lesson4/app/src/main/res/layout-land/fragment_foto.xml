@@ -1,0 +1,123 @@
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context="fragments.FragmentSkills">
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="@string/fio"
+        android:id="@+id/txtMenu"
+        android:textSize="40sp"
+        android:textColor="#c9f4e6"
+        android:layout_alignParentTop="true"
+        android:layout_centerHorizontal="true" />
+
+    <ViewFlipper
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:id="@+id/viewFlipper2"
+        android:autoStart="true"
+        android:flipInterval="2000"
+        android:inAnimation="@anim/flipin"
+        android:outAnimation="@anim/flipout"
+        android:padding="8dp"
+        android:layout_toEndOf="@+id/txtMenu"
+        android:layout_below="@+id/txtMenu">
+
+        <ImageView
+            android:layout_width="220dp"
+            android:layout_height="200dp"
+            android:id="@+id/imageView2"
+            android:background="#84f428"
+            android:adjustViewBounds="true"
+            android:layout_gravity="center_horizontal"
+            android:src="@drawable/foto1"
+            android:layout_centerHorizontal="true" />
+
+        <ImageView
+            android:layout_width="220dp"
+            android:layout_height="200dp"
+            android:id="@+id/imageView3"
+            android:background="#84f428"
+            android:adjustViewBounds="true"
+            android:layout_gravity="center_horizontal"
+            android:src="@drawable/foto2"
+            android:layout_alignTop="@+id/viewFlipper"
+            android:layout_centerHorizontal="true" />
+
+        <ImageView
+            android:layout_width="220dp"
+            android:layout_height="200dp"
+            android:id="@+id/imageView6"
+            android:background="#84f428"
+            android:adjustViewBounds="true"
+            android:layout_gravity="center_horizontal"
+            android:src="@drawable/foto3"
+            android:layout_alignTop="@+id/viewFlipper"
+            android:layout_centerHorizontal="true" />
+    </ViewFlipper>
+
+    <LinearLayout
+        android:orientation="vertical"
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/txtMenu"
+        android:layout_marginTop="23dp"
+        android:layout_toLeftOf="@+id/viewFlipper2"
+        android:layout_toStartOf="@+id/viewFlipper2">
+
+        <TextView
+            android:layout_width="200dp"
+            android:layout_height="40dp"
+            android:textAppearance="?android:attr/textAppearanceSmall"
+            android:text="@string/Family"
+            android:id="@+id/textView4"
+            android:textColor="@color/txtColor"
+            android:textSize="20sp"
+            android:textIsSelectable="true"
+            android:paddingLeft="0dp"
+            android:layout_alignRight="@+id/txtMenu"
+            android:layout_alignEnd="@+id/txtMenu"
+            android:padding="2dp"
+            android:background="@drawable/frame"
+            android:layout_gravity="center"
+            android:gravity="center"
+            android:layout_marginTop="8dp" />
+
+        <TextView
+            android:layout_width="200dp"
+            android:layout_height="40dp"
+            android:textAppearance="?android:attr/textAppearanceSmall"
+            android:text="@string/name"
+            android:id="@+id/textView5"
+            android:textColor="@color/txtColor"
+            android:textSize="20dp"
+            android:layout_alignTop="@+id/linearLayout"
+            android:layout_toRightOf="@+id/linearLayout"
+            android:layout_toEndOf="@+id/linearLayout"
+            android:layout_gravity="center_horizontal"
+            android:padding="2dp"
+            android:gravity="center"
+            android:background="@drawable/frame"
+            android:layout_marginTop="8dp" />
+
+        <TextView
+            android:layout_width="200dp"
+            android:layout_height="40dp"
+            android:textAppearance="?android:attr/textAppearanceMedium"
+            android:text="@string/bDate"
+            android:id="@+id/textView6"
+            android:textColor="@color/txtColor"
+            android:layout_below="@+id/txtMenu"
+            android:layout_centerHorizontal="true"
+            android:layout_gravity="center_horizontal"
+            android:padding="2dp"
+            android:gravity="center"
+            android:background="@drawable/frame"
+            android:layout_marginTop="8dp" />
+    </LinearLayout>
+
+
+</RelativeLayout>
