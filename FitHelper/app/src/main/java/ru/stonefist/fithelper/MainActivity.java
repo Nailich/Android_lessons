@@ -3,6 +3,8 @@ package ru.stonefist.fithelper;
 import android.os.Bundle;
 import android.support.design.widget.FloatingActionButton;
 import android.support.design.widget.Snackbar;
+import android.app.FragmentTransaction;
+import android.app.Fragment;
 import android.view.View;
 import android.support.design.widget.NavigationView;
 import android.support.v4.view.GravityCompat;
@@ -12,9 +14,31 @@ import android.support.v7.app.AppCompatActivity;
 import android.support.v7.widget.Toolbar;
 import android.view.Menu;
 import android.view.MenuItem;
+import android.widget.EditText;
+import android.widget.TextView;
+
+import ru.stonefist.fithelper.fragments.FragmentExerciseComplex;
+import ru.stonefist.fithelper.fragments.FragmentExerciseStatistic;
+import ru.stonefist.fithelper.fragments.FragmentNearestClubs;
+import ru.stonefist.fithelper.fragments.FragmentParameterStatistic;
+import ru.stonefist.fithelper.fragments.FragmentParameters;
+import ru.stonefist.fithelper.fragments.FragmentPeopleCommunication;
+import ru.stonefist.fithelper.fragments.FragmentTraningShedule;
 
 public class MainActivity extends AppCompatActivity
         implements NavigationView.OnNavigationItemSelectedListener {
+
+    FragmentExerciseComplex fExerciseComplex;
+    FragmentExerciseStatistic fExerciseStatistic;
+    FragmentNearestClubs fNearestClubs;
+    FragmentParameters fParameters;
+    FragmentParameterStatistic fParameterStatistic;
+    FragmentPeopleCommunication fPeopleCommunication;
+    FragmentTraningShedule fTraningShedule;
+    TextView pWeight;
+    TextView pHeight;
+    int pImt;
+    TextView calcImt;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -40,6 +64,15 @@ public class MainActivity extends AppCompatActivity
 
         NavigationView navigationView = (NavigationView) findViewById(R.id.nav_view);
         navigationView.setNavigationItemSelectedListener(this);
+
+        fExerciseComplex = new FragmentExerciseComplex();
+        fExerciseStatistic = new FragmentExerciseStatistic();
+        fNearestClubs = new FragmentNearestClubs();
+        fParameters = new FragmentParameters();
+        fParameterStatistic = new FragmentParameterStatistic();
+        fPeopleCommunication = new FragmentPeopleCommunication();
+        fTraningShedule = new FragmentTraningShedule();
+
     }
 
     @Override
@@ -80,24 +113,34 @@ public class MainActivity extends AppCompatActivity
         // Handle navigation view item clicks here.
         int id = item.getItemId();
 
+        FragmentTransaction fTrans = getFragmentManager().beginTransaction();
+
         if (id == R.id.pParameters) {
-            // Handle the camera action
+            fTrans.replace(R.id.container, fParameters);
         } else if (id == R.id.traningShedule) {
-
+            fTrans.replace(R.id.container, fTraningShedule);
         } else if (id == R.id.exerciseComplex) {
-
+            fTrans.replace(R.id.container, fExerciseComplex);
         } else if (id == R.id.nearestClubs) {
-
+            fTrans.replace(R.id.container, fNearestClubs);
         } else if (id == R.id.peopleCommunication) {
-
+            fTrans.replace(R.id.container, fPeopleCommunication);
         } else if (id == R.id.parameterStatistic) {
-
+            fTrans.replace(R.id.container, fParameterStatistic);
         } else if (id == R.id.exerciseStatistic) {
-
-        }
+            fTrans.replace(R.id.container, fExerciseStatistic);
+        }   fTrans.commit();
 
         DrawerLayout drawer = (DrawerLayout) findViewById(R.id.drawer_layout);
         drawer.closeDrawer(GravityCompat.START);
         return true;
+    }
+
+    public void imtCalc(View view) {
+        pHeight =(TextView) view.findViewById(R.id.eHeight);
+        pWeight =(TextView)view.findViewById(R.id.eWeight);
+        calcImt = (TextView) view.findViewById(R.id.calcIMT);
+        pImt = Integer.parseInt(pWeight.getText().toString())/(Integer.parseInt(pHeight.getText().toString())*2);
+        calcImt.setText(pImt);
     }
 }

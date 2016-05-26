@@ -5,4 +5,10 @@
     <string name="navigation_drawer_close">Close navigation drawer</string>
 
     <string name="action_settings">Settings</string>
+    <string name="pWeight">Вес</string>
+    <string name="pHeight">Рост</string>
+    <string name="pIMT">ИМТ</string>
+    <string name="calcIMT">Рассчитать ИМТ</string>
+    <!-- TODO: Remove or change this placeholder text -->
+    <string name="hello_blank_fragment">Hello blank fragment</string>
 </resources>
