@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="utf-8"?>
 <RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
     android:layout_width="match_parent"
-    android:layout_height="wrap_content"
+    android:layout_height="66dp"
     android:background="#181943"
     android:layout_centerHorizontal="true">
 
@@ -9,9 +9,9 @@
         android:layout_width="60dp"
         android:layout_height="60dp"
         android:id="@+id/contactIcon"
-        android:layout_alignParentTop="true"
         android:layout_toRightOf="@+id/number"
-        android:layout_toEndOf="@+id/number" />
+        android:layout_toEndOf="@+id/number"
+        android:layout_centerVertical="true"/>
 
     <TextView
         android:layout_width="50dp"
@@ -19,7 +19,7 @@
         android:textAppearance="?android:attr/textAppearanceLarge"
         android:text="10"
         android:id="@+id/number"
-        android:layout_alignParentTop="true"
+        android:layout_centerVertical="true"
         android:layout_alignParentLeft="true"
         android:layout_alignParentStart="true"
         android:textSize="15dp"
@@ -33,25 +33,30 @@
         android:text="phone"
         android:id="@+id/contactName"
         android:textSize="15dp"
-        android:textColor="#FFF"
-        android:padding="10dp"
+        android:textColor="#000"
+        android:paddingBottom="17dp"
+        android:paddingTop="17dp"
         android:layout_alignParentTop="false"
         android:layout_toRightOf="@+id/contactIcon"
         android:layout_toEndOf="@+id/contactIcon"
-        android:layout_centerInParent="true" />
+        android:layout_centerInParent="true"
+        android:background="#ffffff" />
 
     <TextView
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:textAppearance="?android:attr/textAppearanceLarge"
         android:text="+79162473615"
+        android:paddingBottom="17dp"
+        android:paddingTop="17dp"
         android:id="@+id/contact"
         android:textSize="15dp"
-        android:textColor="#FFF"
-        android:padding="10dp"
-        android:layout_alignParentTop="true"
+        android:textColor="#000"
         android:layout_toRightOf="@+id/contactName"
-        android:layout_toEndOf="@+id/contactName"
-        android:layout_centerInParent="true" />
+        android:layout_centerVertical="true"
+        android:background="#FFF"
+        android:layout_alignParentRight="true"
+        android:layout_alignParentEnd="true"
+        android:textAlignment="center" />
 
 </RelativeLayout>
