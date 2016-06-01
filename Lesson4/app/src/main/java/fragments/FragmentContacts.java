@@ -69,17 +69,18 @@ public class FragmentContacts extends android.app.Fragment {
     @Override
     public View onCreateView(LayoutInflater inflater, ViewGroup container,
                              Bundle savedInstanceState) {
-        View v = inflater.inflate(R.layout.fragment_contacts2, container, false);
-        ListView lv = (ListView) v.findViewById(R.id.lv);
+        View v1 = inflater.inflate(R.layout.fragment_contacts2, container, false);
+        ListView lv = (ListView) v1.findViewById(R.id.lv);
         assert lv != null;
         lv.setAdapter(new customAdapter(loadData()));
-        final customAdapter customAdapter = new customAdapter(loadData());
-        lv.setAdapter(customAdapter);
-        return v;
+      //  final customAdapter customAdapter = new customAdapter(loadData());
+      //  lv.setAdapter(customAdapter);
+        return v1;
     }
 
     public List<contact> loadData() {
-        for(int i =0; i<6;i++){
+        for(int i =0; i<5;i++){
+            System.out.println("Начал загрузку---"+i);
             contacts1.add(new contact(1, R.drawable.phone, "phone", "+79162473615"));
             contacts1.add(new contact(2, R.drawable.email, "email", "ntairov@mail.ru"));
             contacts1.add(new contact(3, R.drawable.skype, "skype", "ntairov"));
