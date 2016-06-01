@@ -27,7 +27,7 @@ public class FragmentContacts extends android.app.Fragment {
 
     String[] contacts;
     ListView contactsList;
-    List<contact> profiles = new ArrayList<>();
+    List<contact> contacts1 = new ArrayList<>();
 
     // TODO: Rename and change types of parameters
     private String mParam1;
@@ -64,13 +64,30 @@ public class FragmentContacts extends android.app.Fragment {
             mParam1 = getArguments().getString(ARG_PARAM1);
             mParam2 = getArguments().getString(ARG_PARAM2);
         }
+
+        ListView lv = (ListView) v.findViewById(R.id.lv);
+        assert lv != null;
+        lv.setAdapter(new customAdapter(loadData()));
+        final customAdapter customAdapter = new customAdapter(loadData());
+        lv.setAdapter(customAdapter);
     }
 
     @Override
     public View onCreateView(LayoutInflater inflater, ViewGroup container,
                              Bundle savedInstanceState) {
-        // Inflate the layout for this fragment
-        return inflater.inflate(R.layout.fragment_contacts2, container, false);
+        View v = inflater.inflate(R.layout.fragment_contacts2, container, false);
+        return v;
+    }
+
+    public List<contact> loadData() {
+        for(int i =1; i<6;i++){
+            contacts1.add(new contact(1, R.drawable.phone, "phone", "+79162473615"));
+            contacts1.add(new contact(2, R.drawable.email, "email", "ntairov@mail.ru"));
+            contacts1.add(new contact(3, R.drawable.skype, "skype", "ntairov"));
+            contacts1.add(new contact(4, R.drawable.facebook, "facebook", "tairov.nail"));
+            contacts1.add(new contact(5, R.drawable.vk, "vk", "ntairov"));
+        }
+        return contacts1;
     }
 
     // TODO: Rename method, update argument and hook method into UI event
