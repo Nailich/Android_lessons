@@ -1,0 +1,21 @@
+<resources>
+    <string name="app_name">Nail Tairov</string>
+    <string name="menu">Menu-land:</string>
+    <string name="fio">ФИО</string>
+    <string name="contacts">Контакты</string>
+    <string name="skills">Навыки</string>
+    <string name="back">Назад</string>
+    <string name="name">Наиль</string>
+    <string name="Family">Таиров</string>
+    <string name="mail">ntairov@mail.ru</string>
+    <string name="bDate">05.06.1985</string>
+    <string name="navigation_drawer_open">Open navigation drawer</string>
+    <string name="navigation_drawer_close">Close navigation drawer</string>
+
+    <string name="action_settings">Сменить фон</string>
+    <string name="date_set">Установить дату</string>
+
+    <!-- TODO: Remove or change this placeholder text -->
+    <string name="hello_blank_fragment">Hello blank fragment</string>
+    <string name="foto">FOTO</string>
+</resources>
