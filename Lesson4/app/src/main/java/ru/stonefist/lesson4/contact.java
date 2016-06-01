@@ -4,23 +4,23 @@ package ru.stonefist.lesson4;
  * Created by Наиль on 01.06.2016.
  */
 public class contact {
-    int number;
+    String number;
     int contactIcon;
     String contactName;
     String contact;
 
-    public contact(int number, int contactIcon, String contactName, String contact) {
+    public contact(String number, int contactIcon, String contactName, String contact) {
         this.number = number;
         this.contactIcon = contactIcon;
         this.contactName = contactName;
         this.contact = contact;
     }
 
-    public int getNumber() {
+    public String getNumber() {
         return number;
     }
 
-    public void setNumber(int number) {
+    public void setNumber(String number) {
         this.number = number;
     }
 

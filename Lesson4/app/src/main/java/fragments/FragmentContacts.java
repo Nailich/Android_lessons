@@ -71,7 +71,7 @@ public class FragmentContacts extends android.app.Fragment {
                              Bundle savedInstanceState) {
         View v1 = inflater.inflate(R.layout.fragment_contacts2, container, false);
         ListView lv = (ListView) v1.findViewById(R.id.lv);
-        assert lv != null;
+        contacts1.clear();
         lv.setAdapter(new customAdapter(loadData()));
       //  final customAdapter customAdapter = new customAdapter(loadData());
       //  lv.setAdapter(customAdapter);
@@ -79,13 +79,13 @@ public class FragmentContacts extends android.app.Fragment {
     }
 
     public List<contact> loadData() {
-        for(int i =0; i<5;i++){
+        for(int i =0; i<1;i++){
             System.out.println("Начал загрузку---"+i);
-            contacts1.add(new contact(1, R.drawable.phone, "phone", "+79162473615"));
-            contacts1.add(new contact(2, R.drawable.email, "email", "ntairov@mail.ru"));
-            contacts1.add(new contact(3, R.drawable.skype, "skype", "ntairov"));
-            contacts1.add(new contact(4, R.drawable.facebook, "facebook", "tairov.nail"));
-            contacts1.add(new contact(5, R.drawable.vk, "vk", "ntairov"));
+            contacts1.add(new contact("1", R.drawable.phone, "phone:", "+79162473615"));
+            contacts1.add(new contact("2", R.drawable.email, "email:", "ntairov@mail.ru"));
+            contacts1.add(new contact("3", R.drawable.skype, "skype:", "ntairov"));
+            contacts1.add(new contact("4", R.drawable.facebook, "facebook:", "tairov.nail"));
+            contacts1.add(new contact("5", R.drawable.vk, "vk:", "ntairov"));
         }
         return contacts1;
     }

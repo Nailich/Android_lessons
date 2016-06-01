@@ -3,8 +3,24 @@
     android:orientation="vertical" android:layout_width="match_parent"
     android:layout_height="match_parent">
 
+    <TextView
+        android:textColor="#fff"
+        android:textStyle="bold"
+        android:gravity="center_horizontal"
+        android:background="#7fc342"
+        android:textAppearance="?android:attr/textAppearanceMedium"
+        android:layout_span="3"
+        android:text="Контакты"
+        android:textSize="30dp"
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:id="@+id/textView3"
+        android:layout_gravity="center_horizontal" />
+
     <ListView
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:id="@+id/lv" />
+        android:id="@+id/lv"
+        android:background="#FFF"/>
+
 </LinearLayout>
