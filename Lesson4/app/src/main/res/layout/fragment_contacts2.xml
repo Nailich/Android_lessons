@@ -14,7 +14,7 @@
         android:textSize="30dp"
         android:layout_width="fill_parent"
         android:layout_height="wrap_content"
-        android:id="@+id/textView3"
+        android:id="@+id/txtE"
         android:layout_gravity="center_horizontal" />
 
     <ListView

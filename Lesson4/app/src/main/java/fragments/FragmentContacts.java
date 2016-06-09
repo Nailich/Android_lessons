@@ -1,16 +1,22 @@
 package fragments;
 
 import android.content.Context;
+import android.content.Intent;
 import android.content.res.Resources;
 import android.net.Uri;
 import android.os.Bundle;
+import android.provider.ContactsContract;
 import android.sax.RootElement;
 import android.support.v4.app.Fragment;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
+import android.view.animation.AnimationUtils;
+import android.widget.AdapterView;
 import android.widget.ArrayAdapter;
 import android.widget.ListView;
+import android.widget.TextView;
+import android.widget.Toast;
 
 import java.util.ArrayList;
 import java.util.List;
@@ -27,6 +33,10 @@ public class FragmentContacts extends android.app.Fragment {
 
     String[] contacts;
     ListView contactsList;
+    TextView textView;
+    Uri address;
+    Intent openlinkIntent;
+    Intent dialIntent;
     List<contact> contacts1 = new ArrayList<>();
 
     // TODO: Rename and change types of parameters
@@ -69,14 +79,48 @@ public class FragmentContacts extends android.app.Fragment {
     @Override
     public View onCreateView(LayoutInflater inflater, ViewGroup container,
                              Bundle savedInstanceState) {
+
         View v1 = inflater.inflate(R.layout.fragment_contacts2, container, false);
+        final TextView textView = (TextView) v1.findViewById(R.id.txtE);
         ListView lv = (ListView) v1.findViewById(R.id.lv);
         contacts1.clear();
         lv.setAdapter(new customAdapter(loadData()));
-      //  final customAdapter customAdapter = new customAdapter(loadData());
-      //  lv.setAdapter(customAdapter);
+
+        lv.setOnItemClickListener(new AdapterView.OnItemClickListener() {
+            public void onItemClick(AdapterView<?> v1, View v, int position, long id) {
+            switch (position) {
+                case 0:
+                    dialIntent = new Intent(Intent.ACTION_DIAL);
+                    dialIntent.setData(Uri.parse("tel:" + "79162473615"));
+                    startActivity(dialIntent);
+                    break;
+                case 1:
+                    Intent emailIntent = new Intent(android.content.Intent.ACTION_SEND);
+                    break;
+                case 2:
+                    dialIntent = new Intent(Intent.ACTION_DIAL);
+                    dialIntent.setData(Uri.parse("tel:" + "ntairov"));
+                    startActivity(dialIntent);
+                    break;
+                case 3:
+                    address = Uri.parse("https://www.facebook.com/nail.tairov");
+                    openlinkIntent = new Intent(Intent.ACTION_VIEW, address);
+                    startActivity(openlinkIntent);
+                    break;
+                case 4:
+                    address = Uri.parse("https://vk.com/ntairov");
+                    openlinkIntent = new Intent(Intent.ACTION_VIEW, address);
+                    startActivity(openlinkIntent);
+                    break;
+            }
+            }
+        });
+
         return v1;
+
     }
+
+
 
     public List<contact> loadData() {
         for(int i =0; i<1;i++){

@@ -10,8 +10,9 @@
         android:layout_height="60dp"
         android:id="@+id/contactIcon"
         android:layout_toRightOf="@+id/number"
-        android:layout_toEndOf="@+id/number"
-        android:layout_centerVertical="true"/>
+        android:layout_centerVertical="true"
+        android:paddingBottom="3dp"
+        android:paddingTop="3dp"/>
 
     <TextView
         android:layout_width="50dp"
